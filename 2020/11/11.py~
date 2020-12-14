@@ -1,0 +1,45 @@
+input = """L.LL.LL.LL
+LLLLLLL.LL
+L.L.L..L..
+LLLL.LL.LL
+L.LL.LL.LL
+L.LLLLL.LL
+..L.L.....
+LLLLLLLLLL
+L.LLLLLL.L
+L.LLLLL.LL"""
+
+class Seat(object):
+    def __init__(self, x, y):
+        self.x = x
+        self.y = y
+
+    def isValid(self):
+        return self.x >= 0 and self.y >= 0
+
+class Board(object):
+    def __init__(self, board):
+        # takes in an existing board object and copies it
+        pass
+
+    def isValidSeat(self, seat):
+        return seat.isValid() and self.x in self.internal and self.y in self.internal[seat.x]
+    
+    def getSeat(self, seat):
+        
+        
+    def isOccupied(self, seat):
+        # check if out of bounds
+        # then check if Board.getSeat == "#"
+        pass
+
+    def isEmpty(self, seat):
+        
+
+    def isFloor(self, seat):
+        pass
+
+
+    
+if __name__ == "__main__":
+    pass

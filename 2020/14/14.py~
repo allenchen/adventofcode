@@ -1,0 +1,3 @@
+if __name__ == "__main__":
+    f = open("13_2.txt", "r")
+    print run(f.read().splitlines()[1].split(","))

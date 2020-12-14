@@ -1,0 +1,31 @@
+import math
+
+instructions = """F10
+N3
+F7
+R90
+F11"""
+
+def run():
+    angle = 90
+    x = 0
+    y = 0
+    directional_vectors = {
+        'N': (0, 1),
+        'S': (0, -1),
+        'E': (1, 0),
+        'W': (-1, 0)
+    }
+    for l in instructions.readlines():
+        instr_type = l[0]
+        value = int(l[1:])
+        if instr_type in ['L', 'R']:
+            if instr_type == 'L':
+                value *= -1
+            angle += value
+        elif instr_type in ['N', 'S', 'E', 'W']:
+            x,y = [value * v for v in directional_vectors[instr_type]]
+        elif instr_type == 'F':
+            x = round(math.sin(math.radians(angle)) * value)
+            y = round(math.cos(math.radians(angle)) * value)
+        if angle 
